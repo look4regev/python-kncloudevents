@@ -9,7 +9,11 @@ from cloudevents.sdk import marshaller
 import io
 
 m = marshaller.NewDefaultHTTPMarshaller()
-logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
+logging.basicConfig(stream=sys.stdout, level=logging.INFO)
+
+
+class ThreadedHTTPServer(socketserver.ThreadingMixIn, http.server.HTTPServer):
+    """Handle requests in a separate thread."""
 
 
 class HttpDefault(object):
@@ -36,9 +40,9 @@ class HttpDefault(object):
                 return
 
         socketserver.TCPServer.allow_reuse_address = True
-        with socketserver.TCPServer(("", self.port), BaseHttp) as httpd:
+        with ThreadedHTTPServer(("", self.port), BaseHttp) as httpd:
             try:
-                logging.info("serving at port", self.port)
+                logging.info(f"serving at port {self.port}")
                 httpd.serve_forever()
             except:
                 httpd.server_close()
