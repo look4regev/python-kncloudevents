@@ -50,7 +50,7 @@ class CloudeventsServer(object):
         socketserver.TCPServer.allow_reuse_address = True
         with ThreadedHTTPServer(("", self.port), BaseHttp) as httpd:
             try:
-                logging.info(f"serving at port {self.port}")
+                logging.info("serving at port {}".format(self.port))
                 httpd.serve_forever()
             except:
                 httpd.server_close()
