@@ -3,24 +3,32 @@ import http.server
 import socketserver
 import json
 import logging
-import sys
 from cloudevents.sdk.event import v02
 from cloudevents.sdk import marshaller
 import io
 
 m = marshaller.NewDefaultHTTPMarshaller()
-logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 
 
 class ThreadedHTTPServer(socketserver.ThreadingMixIn, http.server.HTTPServer):
     """Handle requests in a separate thread."""
 
 
-class HttpDefault(object):
+class CloudeventsServer(object):
+    """Listen for incoming HTTP cloudevents requests.
+
+    cloudevents request is simply a HTTP Post request following a well-defined
+    of how to pass the event data.
+    """
     def __init__(self, port=8080):
         self.port = port
 
     def start_receiver(self, func):
+        """Start listening to HTTP requests
+
+        :param func: the callback to call upon a cloudevents request
+        :type func: cloudevent -> none
+        """
         class BaseHttp(http.server.BaseHTTPRequestHandler):
             def do_POST(self):
                 content_type = self.headers.get('Content-Type')

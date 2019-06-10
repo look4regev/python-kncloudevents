@@ -9,7 +9,7 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=.
 set BUILDDIR=_build
-set SPHINXPROJ=knative_python
+set SPHINXPROJ=kncloudevents
 
 if "%1" == "" goto help
 

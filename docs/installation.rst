@@ -8,13 +8,13 @@ Installation
 Stable release
 --------------
 
-To install knative-python, run this command in your terminal:
+To install kncloudevents, run this command in your terminal:
 
 .. code-block:: console
 
-    $ pip install knative_python
+    $ pip install kncloudevents
 
-This is the preferred method to install knative-python, as it will always install the most recent stable release.
+This is the preferred method to install kncloudevents, as it will always install the most recent stable release.
 
 If you don't have `pip`_ installed, this `Python installation guide`_ can guide
 you through the process.
@@ -32,13 +32,13 @@ You can either clone the public repository:
 
 .. code-block:: console
 
-    $ git clone git://github.com/ron212/knative_python
+    $ git clone git@github.com:elegantmonkeys/python-kncloudevents.git
 
 Or download the `tarball`_:
 
 .. code-block:: console
 
-    $ curl  -OL https://github.com/ron212/knative_python/tarball/master
+    $ curl  -OL https://github.com/elegantmonkeys/python-kncloudevents/tarball/master
 
 Once you have a copy of the source, you can install it with:
 
@@ -47,5 +47,5 @@ Once you have a copy of the source, you can install it with:
     $ python setup.py install
 
 
-.. _Github repo: https://github.com/ron212/knative_python
-.. _tarball: https://github.com/ron212/knative_python/tarball/master
+.. _Github repo: https://github.com/elegantmonkeys/python-kncloudevents
+.. _tarball: https://github.com/elegantmonkeys/python-kncloudevents/tarball/master

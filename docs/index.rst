@@ -2,16 +2,13 @@ Welcome to knative-python's documentation!
 ======================================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :maxdepth: 1
 
-   readme
+   About <readme>
    installation
    usage
-   modules
+   reference
    contributing
-   authors
-   history
 
 Indices and tables
 ==================

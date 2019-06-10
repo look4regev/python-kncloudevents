@@ -5,7 +5,7 @@ Credits
 Development Lead
 ----------------
 
-* Ron Nagar <ronn@elegantmonkeys.com>
+* The Elegant Monkeys <contact@elegantmonkeys.com>
 
 Contributors
 ------------

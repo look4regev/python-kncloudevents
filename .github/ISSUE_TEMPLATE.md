@@ -1,4 +1,4 @@
-* knative-python version:
+* kncloudevents version:
 * Python version:
 * Operating System:
 

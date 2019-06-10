@@ -1,32 +1,41 @@
-==============
-knative-python
-==============
+=============
+kncloudevents
+=============
 
 
-.. image:: https://img.shields.io/pypi/v/knative_python.svg
-        :target: https://pypi.python.org/pypi/knative_python
+.. image:: https://img.shields.io/pypi/v/kncloudevents.svg
+        :target: https://pypi.python.org/pypi/kncloudevents
 
-.. image:: https://img.shields.io/travis/ron212/knative_python.svg
-        :target: https://travis-ci.org/ron212/knative_python
+.. image:: https://img.shields.io/travis/elegantmonkeys/python-kncloudevents.svg
+        :target: https://travis-ci.org/elegantmonkeys/python-kncloudevents
 
-.. image:: https://readthedocs.org/projects/knative-python/badge/?version=latest
-        :target: https://knative-python.readthedocs.io/en/latest/?badge=latest
+.. image:: https://readthedocs.org/projects/kncloudevents/badge/?version=latest
+        :target: https://kncloudevents.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
 
 
-
-Python library for knative
-
-
-* Free software: Apache Software License 2.0
-* Documentation: https://knative-python.readthedocs.io.
+kncloudevents is a HTTP server for listening to Knative Eventing messages
 
 
-Features
---------
+* Documentation: https://kncloudevents.readthedocs.io.
+* Source code: https://github.com/elegantmonkeys/python-kncloudevents
+* Bug reports: https://github.com/elegantmonkeys/python-kncloudevents/issues
 
-* TODO
+
+Description
+-----------
+
+A lightweight package for doing the heavy lifting of setting up a `cloudevents <https://cloudevents.io/>`_ server for you!
+Just provide your function and it will be called on every new event with the event data.
+
+
+Notes
+-----
+
+* Uses the `official cloudevents sdk for Python <https://github.com/cloudevents/sdk-python>`_ for parsing the incoming data
+* Inspired by the `Knative Golang project <https://github.com/knative/eventing-contrib/tree/master/pkg/kncloudevents>`_
+
 
 Credits
 -------

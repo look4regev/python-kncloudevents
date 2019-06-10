@@ -6,11 +6,11 @@
 
 import unittest
 
-from knative_python import knative_python
+from kncloudevents import kncloudevents
 
 
-class TestKnative_python(unittest.TestCase):
-    """Tests for `knative_python` package."""
+class TestKncloudevents(unittest.TestCase):
+    """Tests for `kncloudevents` package."""
 
     def setUp(self):
         """Set up test fixtures, if any."""
