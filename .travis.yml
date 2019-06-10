@@ -1,11 +1,18 @@
 language: python
 python:
-- 3.7
-- 3.6
-- 3.5
+    - 3.7
+    - 3.6
+    - 3.5
 dist: xenial
 install: pip install -U tox-travis
 script: tox
+
 deploy:
-  password:
-    secure: gbRJ1th2D/meulBTJLeiD+bO7jSWynVuiJkqnq/B/ObFV5GfsGPjpFc+xUTIp6IyNFCqEXfNadnygt4PGYe/AyK9KiRGAu51PkIme8+ypoh3A2hHQ/tHaH+5/+bJWDBMebmqMYIUZRw0Iel61Oyh7WQx/upiCfFELVrxlpDgWRItFlDwfsR3ZxAhdl228ZFULpIjB3c45Ffa1pVNeo3c78AeMIfnOTc/r0s7uHQWemmQF8JvAhL7X7A9yXH5fnVfdHp01lvozvS+MdLXnYNyAtuAPdu1kjMatTTJizqDZzKMoF4yttWEuZkP06E4bimML2ntZbgy1cpclELt4MGalpm2VAMGYvxF9hP5GbBn8UqXmvcc1DU/MK09mO15zOnucxw+1tyWzvL98m+aRAscXt99jaUjoIA7Lz7YyyRuZQBAnKcK7xojGafwRFzdr7hXn+MwWljD+mlTohcSzvuanWMWnPTO+Ii9w2QWPfIjGNPmYqv9FrTfXnoo2YWykeH0Mcm7vyNUl36dWllNuLiT6UP1aN29bHVODrVvlF0+zanWvPaHmI/I1qgsFb5iUss/17D6DjAO9dtm7Fn2fL/WA8NNzzkVIFXA0q0BizJ8m6I9KVbxxAEJjZeo0N5NJxJCW8lvKqmv1NQUR6koOX7D1rocUUsuZKfbZOVsLai0wk8=
+    provider: pypi
+    distributions: sdist bdist_wheel
+    user: tem
+    password:
+        secure: gbRJ1th2D/meulBTJLeiD+bO7jSWynVuiJkqnq/B/ObFV5GfsGPjpFc+xUTIp6IyNFCqEXfNadnygt4PGYe/AyK9KiRGAu51PkIme8+ypoh3A2hHQ/tHaH+5/+bJWDBMebmqMYIUZRw0Iel61Oyh7WQx/upiCfFELVrxlpDgWRItFlDwfsR3ZxAhdl228ZFULpIjB3c45Ffa1pVNeo3c78AeMIfnOTc/r0s7uHQWemmQF8JvAhL7X7A9yXH5fnVfdHp01lvozvS+MdLXnYNyAtuAPdu1kjMatTTJizqDZzKMoF4yttWEuZkP06E4bimML2ntZbgy1cpclELt4MGalpm2VAMGYvxF9hP5GbBn8UqXmvcc1DU/MK09mO15zOnucxw+1tyWzvL98m+aRAscXt99jaUjoIA7Lz7YyyRuZQBAnKcK7xojGafwRFzdr7hXn+MwWljD+mlTohcSzvuanWMWnPTO+Ii9w2QWPfIjGNPmYqv9FrTfXnoo2YWykeH0Mcm7vyNUl36dWllNuLiT6UP1aN29bHVODrVvlF0+zanWvPaHmI/I1qgsFb5iUss/17D6DjAO9dtm7Fn2fL/WA8NNzzkVIFXA0q0BizJ8m6I9KVbxxAEJjZeo0N5NJxJCW8lvKqmv1NQUR6koOX7D1rocUUsuZKfbZOVsLai0wk8=
+    on:
+        tags: true
+        python: 3.7
