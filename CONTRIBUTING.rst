@@ -45,7 +45,7 @@ articles, and such.
 Submit Feedback
 ~~~~~~~~~~~~~~~
 
-The best way to send feedback is to file an issue at https://github.com/ron212/knative_python/issues.
+The best way to send feedback is to file an issue at [python-kncloudevents/issues](https://github.com/elegantmonkeys/python-kncloudevents/issues).
 
 If you are proposing a feature:
 
@@ -64,7 +64,7 @@ Ready to contribute? Here's how to set up `kncloudevents` for local development.
 
     $ git clone git@github.com:elegantmonkeys/python-kncloudevents.git
 
-3. Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you set up your fork for local development::
+3. Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you set up your fork for local development:
 
     $ mkvirtualenv python-kncloudevents
     $ cd python-kncloudevents/
